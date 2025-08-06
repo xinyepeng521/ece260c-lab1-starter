@@ -24,4 +24,4 @@ Due to version mismatch between OpenROAD and OpenROAD - flow - scripts, the reco
 If GitHub Classroom is unavailable, clone the lab repository directly:
 ```bash
 git clone https://github.com/UDXS/ece260c-lab1-starter.git
-cd ece260c - lab1 - starter
+cd ece260c-lab1-starter
