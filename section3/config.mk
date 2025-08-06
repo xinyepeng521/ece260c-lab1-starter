@@ -12,3 +12,7 @@ export TNS_END_PERCENT  = 100
 
 # !Complete the following the following 
 # export VERILOG_TOP_PARAMS = N_CYCLES <N> N_PIPES <N> ..
+
+export VERILOG_TOP_PARAMS =  N_CYCLES 4 \
+							 N_PIPES 4 \
+							 N_DEPTH 4

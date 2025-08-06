@@ -1,0 +1,354 @@
+
+==========================================================================
+resizer report_tns
+--------------------------------------------------------------------------
+tns max 0.00
+
+==========================================================================
+resizer report_wns
+--------------------------------------------------------------------------
+wns max 0.00
+
+==========================================================================
+resizer report_worst_slack
+--------------------------------------------------------------------------
+worst slack max 3.01
+
+==========================================================================
+resizer report_checks -path_delay min
+--------------------------------------------------------------------------
+Startpoint: genblk1[2].pipe.result[13]$_DFFE_PP_
+            (rising edge-triggered flip-flop clocked by core_clock)
+Endpoint: genblk1[2].pipe.result[13]$_DFFE_PP_
+          (rising edge-triggered flip-flop clocked by core_clock)
+Path Group: core_clock
+Path Type: min
+
+Fanout     Cap    Slew   Delay    Time   Description
+-----------------------------------------------------------------------------
+                  0.00    0.00    0.00   clock core_clock (rise edge)
+                          0.00    0.00   clock network delay (ideal)
+                  0.00    0.00    0.00 ^ genblk1[2].pipe.result[13]$_DFFE_PP_/CLK (sg13g2_dfrbp_1)
+     2    0.01    0.03    0.19    0.19 v genblk1[2].pipe.result[13]$_DFFE_PP_/Q (sg13g2_dfrbp_1)
+                                         net48 (net)
+                  0.03    0.00    0.19 v _0929_/A (sg13g2_nand2_1)
+     1    0.00    0.03    0.04    0.23 ^ _0929_/Y (sg13g2_nand2_1)
+                                         _0468_ (net)
+                  0.03    0.00    0.23 ^ _0930_/B1 (sg13g2_o21ai_1)
+     1    0.00    0.03    0.04    0.26 v _0930_/Y (sg13g2_o21ai_1)
+                                         _0065_ (net)
+                  0.03    0.00    0.26 v genblk1[2].pipe.result[13]$_DFFE_PP_/D (sg13g2_dfrbp_1)
+                                  0.26   data arrival time
+
+                  0.00    0.00    0.00   clock core_clock (rise edge)
+                          0.00    0.00   clock network delay (ideal)
+                          0.00    0.00   clock reconvergence pessimism
+                                  0.00 ^ genblk1[2].pipe.result[13]$_DFFE_PP_/CLK (sg13g2_dfrbp_1)
+                         -0.04   -0.04   library hold time
+                                 -0.04   data required time
+-----------------------------------------------------------------------------
+                                 -0.04   data required time
+                                 -0.26   data arrival time
+-----------------------------------------------------------------------------
+                                  0.30   slack (MET)
+
+
+
+==========================================================================
+resizer report_checks -path_delay max
+--------------------------------------------------------------------------
+Startpoint: reset (input port clocked by core_clock)
+Endpoint: genblk1[3].pipe.result[14]$_DFFE_PP_
+          (rising edge-triggered flip-flop clocked by core_clock)
+Path Group: core_clock
+Path Type: max
+
+Fanout     Cap    Slew   Delay    Time   Description
+-----------------------------------------------------------------------------
+                  0.00    0.00    0.00   clock core_clock (rise edge)
+                          0.00    0.00   clock network delay (ideal)
+                          1.00    1.00 v input external delay
+     1    0.02    0.00    0.00    1.00 v reset (in)
+                                         reset (net)
+                  0.00    0.00    1.00 v input34/A (sg13g2_buf_8)
+     7    0.04    0.03    0.07    1.07 v input34/X (sg13g2_buf_8)
+                                         net34 (net)
+                  0.03    0.00    1.07 v place270/A (sg13g2_buf_4)
+     5    0.02    0.03    0.08    1.15 v place270/X (sg13g2_buf_4)
+                                         net270 (net)
+                  0.03    0.00    1.16 v place271/A (sg13g2_buf_4)
+     6    0.03    0.04    0.09    1.24 v place271/X (sg13g2_buf_4)
+                                         net271 (net)
+                  0.04    0.00    1.24 v _0991_/A (sg13g2_inv_1)
+     2    0.01    0.04    0.04    1.29 ^ _0991_/Y (sg13g2_inv_1)
+                                         _0527_ (net)
+                  0.04    0.00    1.29 ^ _0997_/A (sg13g2_nand4_1)
+     7    0.04    0.44    0.37    1.65 v _0997_/Y (sg13g2_nand4_1)
+                                         _0533_ (net)
+                  0.44    0.00    1.65 v _1002_/S (sg13g2_mux2_1)
+     1    0.00    0.04    0.22    1.87 v _1002_/X (sg13g2_mux2_1)
+                                         _0084_ (net)
+                  0.04    0.00    1.87 v genblk1[3].pipe.result[14]$_DFFE_PP_/D (sg13g2_dfrbp_1)
+                                  1.87   data arrival time
+
+                  0.00    5.00    5.00   clock core_clock (rise edge)
+                          0.00    5.00   clock network delay (ideal)
+                          0.00    5.00   clock reconvergence pessimism
+                                  5.00 ^ genblk1[3].pipe.result[14]$_DFFE_PP_/CLK (sg13g2_dfrbp_1)
+                         -0.12    4.88   library setup time
+                                  4.88   data required time
+-----------------------------------------------------------------------------
+                                  4.88   data required time
+                                 -1.87   data arrival time
+-----------------------------------------------------------------------------
+                                  3.01   slack (MET)
+
+
+
+==========================================================================
+resizer report_checks -unconstrained
+--------------------------------------------------------------------------
+Startpoint: reset (input port clocked by core_clock)
+Endpoint: genblk1[3].pipe.result[14]$_DFFE_PP_
+          (rising edge-triggered flip-flop clocked by core_clock)
+Path Group: core_clock
+Path Type: max
+
+Fanout     Cap    Slew   Delay    Time   Description
+-----------------------------------------------------------------------------
+                  0.00    0.00    0.00   clock core_clock (rise edge)
+                          0.00    0.00   clock network delay (ideal)
+                          1.00    1.00 v input external delay
+     1    0.02    0.00    0.00    1.00 v reset (in)
+                                         reset (net)
+                  0.00    0.00    1.00 v input34/A (sg13g2_buf_8)
+     7    0.04    0.03    0.07    1.07 v input34/X (sg13g2_buf_8)
+                                         net34 (net)
+                  0.03    0.00    1.07 v place270/A (sg13g2_buf_4)
+     5    0.02    0.03    0.08    1.15 v place270/X (sg13g2_buf_4)
+                                         net270 (net)
+                  0.03    0.00    1.16 v place271/A (sg13g2_buf_4)
+     6    0.03    0.04    0.09    1.24 v place271/X (sg13g2_buf_4)
+                                         net271 (net)
+                  0.04    0.00    1.24 v _0991_/A (sg13g2_inv_1)
+     2    0.01    0.04    0.04    1.29 ^ _0991_/Y (sg13g2_inv_1)
+                                         _0527_ (net)
+                  0.04    0.00    1.29 ^ _0997_/A (sg13g2_nand4_1)
+     7    0.04    0.44    0.37    1.65 v _0997_/Y (sg13g2_nand4_1)
+                                         _0533_ (net)
+                  0.44    0.00    1.65 v _1002_/S (sg13g2_mux2_1)
+     1    0.00    0.04    0.22    1.87 v _1002_/X (sg13g2_mux2_1)
+                                         _0084_ (net)
+                  0.04    0.00    1.87 v genblk1[3].pipe.result[14]$_DFFE_PP_/D (sg13g2_dfrbp_1)
+                                  1.87   data arrival time
+
+                  0.00    5.00    5.00   clock core_clock (rise edge)
+                          0.00    5.00   clock network delay (ideal)
+                          0.00    5.00   clock reconvergence pessimism
+                                  5.00 ^ genblk1[3].pipe.result[14]$_DFFE_PP_/CLK (sg13g2_dfrbp_1)
+                         -0.12    4.88   library setup time
+                                  4.88   data required time
+-----------------------------------------------------------------------------
+                                  4.88   data required time
+                                 -1.87   data arrival time
+-----------------------------------------------------------------------------
+                                  3.01   slack (MET)
+
+
+
+==========================================================================
+resizer report_check_types -max_slew -max_cap -max_fanout -violators
+--------------------------------------------------------------------------
+
+==========================================================================
+resizer max_slew_check_slack
+--------------------------------------------------------------------------
+2.063558340072632
+
+==========================================================================
+resizer max_slew_check_limit
+--------------------------------------------------------------------------
+2.5074000358581543
+
+==========================================================================
+resizer max_slew_check_slack_limit
+--------------------------------------------------------------------------
+0.8230
+
+==========================================================================
+resizer max_fanout_check_slack
+--------------------------------------------------------------------------
+0.0
+
+==========================================================================
+resizer max_fanout_check_limit
+--------------------------------------------------------------------------
+8.0
+
+==========================================================================
+resizer max_fanout_check_slack_limit
+--------------------------------------------------------------------------
+0.0000
+
+==========================================================================
+resizer max_capacitance_check_slack
+--------------------------------------------------------------------------
+0.25501567125320435
+
+==========================================================================
+resizer max_capacitance_check_limit
+--------------------------------------------------------------------------
+0.30000001192092896
+
+==========================================================================
+resizer max_capacitance_check_slack_limit
+--------------------------------------------------------------------------
+0.8501
+
+==========================================================================
+resizer max_slew_violation_count
+--------------------------------------------------------------------------
+max slew violation count 0
+
+==========================================================================
+resizer max_fanout_violation_count
+--------------------------------------------------------------------------
+max fanout violation count 0
+
+==========================================================================
+resizer max_cap_violation_count
+--------------------------------------------------------------------------
+max cap violation count 0
+
+==========================================================================
+resizer setup_violation_count
+--------------------------------------------------------------------------
+setup violation count 0
+
+==========================================================================
+resizer hold_violation_count
+--------------------------------------------------------------------------
+hold violation count 0
+
+==========================================================================
+resizer report_checks -path_delay max reg to reg
+--------------------------------------------------------------------------
+Startpoint: genblk1[1].pipe.this_query[30]$_SDFFE_PP0P_
+            (rising edge-triggered flip-flop clocked by core_clock)
+Endpoint: genblk1[1].pipe.result[12]$_DFFE_PP_
+          (rising edge-triggered flip-flop clocked by core_clock)
+Path Group: core_clock
+Path Type: max
+
+  Delay    Time   Description
+---------------------------------------------------------
+   0.00    0.00   clock core_clock (rise edge)
+   0.00    0.00   clock network delay (ideal)
+   0.00    0.00 ^ genblk1[1].pipe.this_query[30]$_SDFFE_PP0P_/CLK (sg13g2_dfrbp_1)
+   0.21    0.21 v genblk1[1].pipe.this_query[30]$_SDFFE_PP0P_/Q (sg13g2_dfrbp_1)
+   0.10    0.30 v place260/X (sg13g2_buf_4)
+   0.20    0.50 v _0775_/X (sg13g2_or4_1)
+   0.10    0.61 ^ _0776_/Y (sg13g2_a21oi_1)
+   0.07    0.68 v _0777_/Y (sg13g2_a221oi_1)
+   0.29    0.97 ^ _0789_/Y (sg13g2_o21ai_1)
+   0.23    1.19 v _0796_/X (sg13g2_mux2_1)
+   0.18    1.37 ^ _0798_/Y (sg13g2_a221oi_1)
+   0.10    1.48 v _0800_/Y (sg13g2_a21oi_1)
+   0.11    1.59 ^ _0832_/Y (sg13g2_o21ai_1)
+   0.11    1.70 ^ _0840_/X (sg13g2_mux2_1)
+   0.00    1.70 ^ genblk1[1].pipe.result[12]$_DFFE_PP_/D (sg13g2_dfrbp_1)
+           1.70   data arrival time
+
+   5.00    5.00   clock core_clock (rise edge)
+   0.00    5.00   clock network delay (ideal)
+   0.00    5.00   clock reconvergence pessimism
+           5.00 ^ genblk1[1].pipe.result[12]$_DFFE_PP_/CLK (sg13g2_dfrbp_1)
+  -0.11    4.89   library setup time
+           4.89   data required time
+---------------------------------------------------------
+           4.89   data required time
+          -1.70   data arrival time
+---------------------------------------------------------
+           3.18   slack (MET)
+
+
+
+==========================================================================
+resizer report_checks -path_delay min reg to reg
+--------------------------------------------------------------------------
+Startpoint: genblk1[2].pipe.result[13]$_DFFE_PP_
+            (rising edge-triggered flip-flop clocked by core_clock)
+Endpoint: genblk1[2].pipe.result[13]$_DFFE_PP_
+          (rising edge-triggered flip-flop clocked by core_clock)
+Path Group: core_clock
+Path Type: min
+
+  Delay    Time   Description
+---------------------------------------------------------
+   0.00    0.00   clock core_clock (rise edge)
+   0.00    0.00   clock network delay (ideal)
+   0.00    0.00 ^ genblk1[2].pipe.result[13]$_DFFE_PP_/CLK (sg13g2_dfrbp_1)
+   0.19    0.19 v genblk1[2].pipe.result[13]$_DFFE_PP_/Q (sg13g2_dfrbp_1)
+   0.04    0.23 ^ _0929_/Y (sg13g2_nand2_1)
+   0.04    0.26 v _0930_/Y (sg13g2_o21ai_1)
+   0.00    0.26 v genblk1[2].pipe.result[13]$_DFFE_PP_/D (sg13g2_dfrbp_1)
+           0.26   data arrival time
+
+   0.00    0.00   clock core_clock (rise edge)
+   0.00    0.00   clock network delay (ideal)
+   0.00    0.00   clock reconvergence pessimism
+           0.00 ^ genblk1[2].pipe.result[13]$_DFFE_PP_/CLK (sg13g2_dfrbp_1)
+  -0.04   -0.04   library hold time
+          -0.04   data required time
+---------------------------------------------------------
+          -0.04   data required time
+          -0.26   data arrival time
+---------------------------------------------------------
+           0.30   slack (MET)
+
+
+
+==========================================================================
+resizer critical path target clock latency max path
+--------------------------------------------------------------------------
+0.0000
+
+==========================================================================
+resizer critical path target clock latency min path
+--------------------------------------------------------------------------
+0.0000
+
+==========================================================================
+resizer critical path source clock latency min path
+--------------------------------------------------------------------------
+0.0000
+
+==========================================================================
+resizer critical path delay
+--------------------------------------------------------------------------
+1.8695
+
+==========================================================================
+resizer critical path slack
+--------------------------------------------------------------------------
+3.0069
+
+==========================================================================
+resizer slack div critical path delay
+--------------------------------------------------------------------------
+160.839797
+
+==========================================================================
+resizer report_power
+--------------------------------------------------------------------------
+Group                  Internal  Switching    Leakage      Total
+                          Power      Power      Power      Power (Watts)
+----------------------------------------------------------------
+Sequential             1.03e-03   3.44e-05   3.89e-08   1.06e-03  75.1%
+Combinational          1.75e-04   1.78e-04   1.05e-07   3.53e-04  24.9%
+Clock                  0.00e+00   0.00e+00   0.00e+00   0.00e+00   0.0%
+Macro                  0.00e+00   0.00e+00   0.00e+00   0.00e+00   0.0%
+Pad                    0.00e+00   0.00e+00   0.00e+00   0.00e+00   0.0%
+----------------------------------------------------------------
+Total                  1.20e-03   2.13e-04   1.44e-07   1.42e-03 100.0%
+                          85.0%      15.0%       0.0%
