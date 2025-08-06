@@ -16,7 +16,7 @@ This lab focuses on Design Space Exploration (DSE) in digital circuit design, co
 - OpenROAD, Yosys, OpenSTA (included in the Docker container)
 
 ### Container Version Note
-Due to version mismatch between OpenROAD and OpenROAD - flow - scripts, the recommended container is: `ghcr.io/udxs/ece260c - sources:main` (no `orfs_copy` command, use `cp -r` instead).
+Due to version mismatch between OpenROAD and OpenROAD-flow-scripts, the recommended container is: `ghcr.io/udxs/ece260c-sources:main` (no `orfs_copy` command, use `cp -r` instead).
 
 ## Installation Steps
 
